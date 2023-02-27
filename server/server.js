@@ -3,6 +3,7 @@ import cors from "cors";
 import router from "./routes/test.js";
 import * as dotenv from "dotenv";
 import mongoose from "mongoose";
+import charactersRoute from "./routes/charactersRoute.js";
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 5000;
@@ -35,6 +36,7 @@ const addMiddlewares = () => {
 
 const loadRoutes = () => {
   app.use("/api", router);
+  app.use("/api/characters", charactersRoute);
 };
 
 const startServer = () => {
