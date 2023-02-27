@@ -24,6 +24,7 @@ const addMiddlewares = () => {
       extended: true,
     })
   );
+
   const corsOptions = {
     // origin: "vercel deployment",
     origin: "http://localhost:3000",
