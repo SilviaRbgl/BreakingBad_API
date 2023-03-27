@@ -37,9 +37,11 @@ function Homepage() {
         <p>The breakingbad.API only allows you to GET data.</p>
       </div>
       <div className="container">
-         <h2>characters</h2>
-        <p>In this request you will find a list of the characters of the serie Breaking Bad.
-          Characters objects can have the following properties:</p>
+        <h2>characters</h2>
+        <p>
+          In this request you will find a list of the characters of the serie
+          Breaking Bad. Characters objects can have the following properties:
+        </p>
         <ul>
           <li>
             <p>char_id: the general id of the character (Number)</p>
@@ -84,8 +86,7 @@ function Homepage() {
           </li>
         </ul>
       </div>
-       
- 
+
       <div className="container">
         <h2>endpoints</h2>
         <h3>/api/all</h3>
@@ -95,7 +96,7 @@ function Homepage() {
         </p>
         <p>http://localhost:5000/api/characters/all</p>
       </div>
-    <Footer />
+      <Footer />
     </>
   );
 }
