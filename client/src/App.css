@@ -8,3 +8,35 @@
   border-radius: 60px;
   padding: 5px 35px 5px 35px;
 }
+
+.container {
+  margin: 20px;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 60px;
+  padding: 5px 35px 5px 35px;
+}
+
+.footer {
+  font-size: 14px;
+  background: white;
+  display: flex;
+  align-items: center;
+  color: #2c2c2c;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 0px 14px 0px;
+  border-radius: 40px 40px 0 0;
+}
+
+.footer p {
+  margin-bottom: 4px;
+}
+
+.footer a {
+  color: #8d8d8d;
+  text-decoration: none;
+}
