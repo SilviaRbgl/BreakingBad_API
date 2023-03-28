@@ -27,7 +27,8 @@ const addMiddlewares = () => {
   );
 
   const corsOptions = {
-    origin: "breaking-bad-api-server.vercel.app",
+    origin: "http://breaking-bad-api-server.vercel.app",
+    // origin: "http://localhost:3000",
     credentials: true,
   };
   app.use(cors());
