@@ -95,6 +95,16 @@ function Homepage() {
           characters.
         </p>
         <p>http://localhost:5000/api/characters/all</p>
+        <h3>/api/byid</h3>
+        <p>
+          The "/byid" endpoint allows you to fetch a specific character by ID.
+        </p>
+        <p>http://localhost:5000/api/characters/all/byid</p>
+        <p>
+          You will be able to select which ID with the query param "id" like
+          follow:
+        </p>
+        <p>http://localhost:5000/api/characters/all/1</p>
       </div>
       <Footer />
     </>

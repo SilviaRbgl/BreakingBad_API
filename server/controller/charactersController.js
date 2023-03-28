@@ -18,11 +18,14 @@ const getAllCharacters = async (req, res) => {
 };
 
 const getCharactersById = async (req, res) => {
-  console.log("req>>", req.params);
-  const { byId } = req.params;
+  const { byid } = req.params;
   try {
-    const charactersById = await charactersModel.find({ byId: byId }).exec();
-    console.log("reqById", charactersById);
+    const charactersById = await charactersModel.find({ char_id: byid }).exec();
+    if (charactersById.length === 0) {
+      res.status(200).json({
+        msg: "no characters with this id",
+      });
+    }
     res.status(200).json({
       number: charactersById.length,
       charactersById,
@@ -31,7 +34,7 @@ const getCharactersById = async (req, res) => {
     console.log("error", error);
     res.status(500).json({
       error,
-      msg: "error in the server getting characters by id",
+      msg: "server error getting characters by id",
     });
   }
 };

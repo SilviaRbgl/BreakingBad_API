@@ -7,5 +7,5 @@ import {
 const router = express.Router();
 
 router.get("/all", getAllCharacters);
-router.get("/:byid", getCharactersById);
+router.get("/all/:byid", getCharactersById);
 export default router;
