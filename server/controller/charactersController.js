@@ -18,6 +18,7 @@ const getAllCharacters = async (req, res) => {
 };
 
 const getCharactersById = async (req, res) => {
+ 
   const { byid } = req.params;
   try {
     const charactersById = await charactersModel.find({ char_id: byid }).exec();
