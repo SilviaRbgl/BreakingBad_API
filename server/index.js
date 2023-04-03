@@ -46,8 +46,8 @@ const startServer = () => {
 };
 
 (async function controller() {
-  await mongoDBConnection();
-  addMiddlewares();
+  await addMiddlewares();
   loadRoutes();
+  mongoDBConnection();
   startServer();
 })();
