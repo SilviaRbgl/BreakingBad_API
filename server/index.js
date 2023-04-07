@@ -6,11 +6,12 @@ import mongoose from "mongoose";
 import charactersRoute from "./routes/charactersRoute.js";
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5005;
 
 const mongoDBConnection = async () => {
   try {
     mongoose.set("strictQuery", false);
+    console.log("rocess.env.DB", process.env.DB);
     await mongoose.connect(process.env.DB);
     console.log("MongoDB is running in port", port);
   } catch (error) {
@@ -31,6 +32,7 @@ const addMiddlewares = () => {
     // origin: "http://localhost:3000",
     credentials: true,
   };
+  // app.use(cors());
   app.use(cors());
 };
 
@@ -45,9 +47,19 @@ const startServer = () => {
   });
 };
 
+// (async function controller() {
+//   await addMiddlewares();
+//   loadRoutes();
+//   mongoDBConnection();
+//   startServer();
+// })();
 (async function controller() {
-  await addMiddlewares();
+  addMiddlewares();
   loadRoutes();
-  mongoDBConnection();
+  try {
+    await mongoDBConnection();
+  } catch (error) {
+    console.log("error starting MongoDB", error);
+  }
   startServer();
 })();
