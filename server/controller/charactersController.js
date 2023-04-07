@@ -18,6 +18,8 @@ const getAllCharacters = async (req, res) => {
 };
 
 const getCharactersById = async (req, res) => {
+  console.log("req", req);
+  console.log("req", req.params);
   const { byid } = req.params;
   try {
     const charactersById = await charactersModel.find({ char_id: byid }).exec();

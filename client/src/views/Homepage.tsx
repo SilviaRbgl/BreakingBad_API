@@ -94,17 +94,19 @@ function Homepage() {
           The "/all" endpoint allows you to fetch the complete list of the
           characters.
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all">https://breaking-bad-api-server.vercel.app/api/characters/all</a>
+        {/* REVIEW he añadido el atributo target="_blank", para que el link se abra en otra pestaña. y por seguridad , al hacer eso, se recomienda añadir el atributo rel="noreferrer" */}
+        <a href="https://breaking-bad-api-blue.vercel.app/api/characters/all" rel="noreferrer" target="_blank">https://breaking-bad-api-blue.vercel.app/api/characters/all</a>
         <h3>/api/byid</h3>
         <p>
           The "/byid" endpoint allows you to fetch a specific character by ID.
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/byid">https://breaking-bad-api-server.vercel.app/api/characters/byid</a>
+        <a href="https://breaking-bad-api-blue.vercel.app/api/characters/all/byid" rel="noreferrer" target="_blank">https://breaking-bad-api-blue.vercel.app/api/characters/all/byid</a>
+        {/* REVIEW lo que estas usando no es un query param, sino un URL param. un Query param seria si tuvieses que insertar una key en la url, precedido de "?", en este caso seria algo como /?id=1 */}
         <p>
           You will be able to select which ID with the query param "char_id" like
           follow:
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/1">https://breaking-bad-api-server.vercel.app/api/characters/all/1</a>
+        <a href="https://breaking-bad-api-blue.vercel.app/api/characters/all/1" rel="noreferrer" target="_blank">https://breaking-bad-api-blue.vercel.app/api/characters/all/1</a>
 
       </div>
       <Footer />
