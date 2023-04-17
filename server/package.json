@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
+<<<<<<< HEAD
     "testing": "nodemon index.js"
+=======
+    "testing":"nodemon index.js"
+>>>>>>> 1127a61de61c98158602e8d0b2901c1e4df8361f
   },
   "type": "module",
   "author": "SilviaRbgl",

@@ -94,17 +94,17 @@ function Homepage() {
           The "/all" endpoint allows you to fetch the complete list of the
           characters.
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all" rel="noreferrer" target="_blank">https://breaking-bad-api-server.vercel.app/api/characters/all</a>
+        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all">https://breaking-bad-api-server.vercel.app/api/characters/all</a>
         <h3>/api/byid</h3>
         <p>
           The "/byid" endpoint allows you to fetch a specific character by ID.
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/byid" rel="noreferrer" target="_blank">https://breaking-bad-api-server.vercel.app/api/characters/byid</a>
+        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/byid">https://breaking-bad-api-server.vercel.app/api/characters/byid</a>
         <p>
           You will be able to select which ID with the query param "char_id" like
           follow:
         </p>
-        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/1" rel="noreferrer" target="_blank">https://breaking-bad-api-server.vercel.app/api/characters/all/1</a>
+        <a href="https://breaking-bad-api-server.vercel.app/api/characters/all/1">https://breaking-bad-api-server.vercel.app/api/characters/all/1</a>
 
       </div>
       <Footer />
