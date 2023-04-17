@@ -25,12 +25,6 @@ const addMiddlewares = () => {
       extended: true,
     })
   );
-
-  const corsOptions = {
-    origin: "http://breaking-bad-api-server.vercel.app",
-    // origin: "http://localhost:3000",
-    credentials: true,
-  };
   app.use(cors());
 };
 
@@ -46,8 +40,12 @@ const startServer = () => {
 };
 
 (async function controller() {
-  await addMiddlewares();
+  addMiddlewares();
   loadRoutes();
-  mongoDBConnection();
+  try {
+    await mongoDBConnection();
+  } catch (error) {
+    console.log("error starting MongoDB", error);
+  }
   startServer();
 })();
